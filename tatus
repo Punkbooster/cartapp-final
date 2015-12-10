@@ -1,0 +1,29 @@
+[33mcommit 9a71b97eb3bdcc41586e20794677655f1b65f972[m
+Author: Punkbooster <2morrow2late@rambler.ru>
+Date:   Wed Nov 18 01:23:19 2015 +0100
+
+    Add categories to products & seeds
+
+[33mcommit f917b815137da11e1788757fa51b2d1b622360c0[m
+Author: Punkbooster <2morrow2late@rambler.ru>
+Date:   Wed Nov 18 00:56:05 2015 +0100
+
+    Remove category attribute from products
+
+[33mcommit e42a2407526d9a1527daa37e7df51b8ba595acf6[m
+Author: Punkbooster <2morrow2late@rambler.ru>
+Date:   Wed Nov 18 00:45:07 2015 +0100
+
+    Delete unneeded atributes from products
+
+[33mcommit c7d346fa27ddc94068b0e1ce28d165f49abab00b[m
+Author: Punkbooster <2morrow2late@rambler.ru>
+Date:   Mon Nov 16 18:19:33 2015 +0100
+
+    Restrict user
+
+[33mcommit 32f57986792ebef4a0068e754d01bbd5d825acea[m
+Author: Punkbooster <2morrow2late@rambler.ru>
+Date:   Mon Nov 16 17:54:04 2015 +0100
+
+    Add items to cart list

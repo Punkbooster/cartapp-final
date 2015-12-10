@@ -1,0 +1,24 @@
+.row
+  .col-md-offset-4.col-md-3
+    .thumbnail
+      .caption
+        %h1 Your cart
+        - if @cart.empty?
+          %p Your cart currently empty.
+        -else
+          = link_to "Empty your cart", cart_clear_path
+        %br
+        - total = 0
+        %ul
+          - @cart.each do |id, quantity|
+            - product = Product.find_by_id(id)
+            %li
+              = link_to product.title, product
+              %p= product.description
+              %p= number_to_currency(product.price, :unit => '$')
+              %p 
+                Quantity: #{quantity}
+            - total += quantity *product.price
+          %p 
+            %b= number_to_currency(total, :unit => '$')       
+            %b= link_to "Create Order", root_path, notice: 'Product was successfully updated.'

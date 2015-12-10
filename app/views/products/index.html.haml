@@ -1,0 +1,31 @@
+.row
+  - @products.each do |product|
+    .col-sm-4.col-md-3
+      .thumbnail
+        %img= image_tag product.image.url(:thumb)
+        .caption
+          - if current_user.role.nil?
+            %h3= product.title
+            %h4
+            %p= product.category.name
+            %p= number_to_currency(product.price, unit: "$")
+            %p= product.description
+            %p
+              %a= link_to 'Show', product, class: "btn btn-default"
+            %p
+              %a.btn.btn-primary{:href => "/cart/#{product.id}", :role => "button"} Add to cart
+          - else
+            %h3= product.title
+            %h4
+            %p= product.category.name
+            %p= number_to_currency(product.price, unit: "$")
+            %p= product.description
+            %p
+              %a= link_to 'Show', product, class: "btn btn-default"
+              %a= link_to 'Edit', edit_product_path(product), class: "btn btn-default"
+              %a= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"
+            %p
+              %a.btn.btn-primary{:href => "/cart/#{product.id}", :role => "button"} Add to cart
+- if current_user.role == "admin"              
+  .btn
+    %a= link_to 'New Product', new_product_path, class: "btn btn-success"

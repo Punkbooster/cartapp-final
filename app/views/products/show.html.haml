@@ -1,0 +1,10 @@
+.row
+  .col-md-offset-4.col-md-3
+    .thumbnail
+      %img= image_tag @product.image.url(:medium)
+      .caption
+        %h3= @product.title
+        %p= @product.description
+        %p= number_to_currency(@product.price, unit: "$")
+        = link_to 'Edit', edit_product_path(@product), class: "btn btn-primary"
+        \#{link_to 'Back', products_path, class: "btn btn-primary"}
